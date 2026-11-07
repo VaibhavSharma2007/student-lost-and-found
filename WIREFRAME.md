@@ -84,3 +84,9 @@
 |                                      |
 +--------------------------------------+
 ```
+## Visual Wireframes
+
+The visual wireframes are available in the following files:
+
+- [View PDF Wireframes](./FindIt_Wireframes.pdf)
+- [Editable PowerPoint Wireframes](./FindIt_Wireframes.pptx)
