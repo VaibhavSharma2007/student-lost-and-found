@@ -116,3 +116,26 @@ student-lost-and-found/
 ---
 
 Developed as a student project to make lost-and-found management easier within college campuses.
+
+
+## Product Inspiration
+
+### Reference Product: Foundit!
+
+Source: Product Hunt
+
+Link: https://www.producthunt.com/products/foundit
+
+FindIt takes inspiration from the idea of helping people recover
+their lost belongings through technology.
+
+Foundit! uses QR codes to help identify the owners of lost items.
+Our project applies the broader lost-and-found concept to a
+college environment.
+
+FindIt is independently developed for students. It allows them
+to register, report lost belongings, browse reported items,
+upload item photographs, and contact other students.
+
+The goal is to make reporting and recovering lost belongings
+easier within a college campus.
