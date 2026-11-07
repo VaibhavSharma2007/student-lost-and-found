@@ -1,49 +1,401 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* BASIC RESET */
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-a {
-  color: inherit;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+  color: #1e293b;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
   text-decoration: none;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* MAIN SECTION */
+
+main {
+  padding: 60px;
+}
+
+/* WELCOME SECTION */
+
+.hero {
+  background-color: #eaf1ff;
+  padding: 80px 60px;
+  border-radius: 16px;
+  margin: 30px 60px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #172554;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 30px;
+  color: #172554;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* COMPLAINTS SECTION */
+
+.complaints {
+  padding: 40px 60px;
+}
+
+.complaint-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.complaint-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.item-image {
+  background-color: #eaf1ff;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 65px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #172554;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* FILE COMPLAINT SECTION */
+
+.file-complaint {
+  background-color: white;
+  padding: 40px;
+  margin: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.complaint-form {
+  max-width: 700px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group small {
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #172554;
+  color: white;
+  font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .complaint-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    padding: 20px 30px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .hero,
+  .complaints,
+  .file-complaint {
+    margin: 20px 0;
+    padding: 30px;
   }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .complaint-list {
+    grid-template-columns: 1fr;
+  }
+
+  .file-complaint {
+    padding: 20px;
+  }
+}
+
+/* LOGIN AND SIGNUP PAGES */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaf1ff;
+  padding: 30px 15px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h1 {
+  color: #172554;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.auth-card > p {
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 25px;
+  color: #64748b;
+}
+
+.auth-switch a,
+.back-home {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-home {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 25px;
+  }
+}
+
